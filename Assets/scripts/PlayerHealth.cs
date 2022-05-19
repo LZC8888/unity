@@ -14,6 +14,10 @@ public class PlayerHealth : MonoBehaviour
     private Vector3 healthScale;
     private PlayerCtrl playerControl;
     private Animator anim;
+   void Start()
+    {
+        anim = transform.root.GetComponent<Animator>(); 
+    }
     void Awake()
     {
         playerControl = GetComponent<PlayerCtrl>();
@@ -45,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
         {
             c.isTrigger = true;
         }
-
+        anim.SetTrigger("death");
         SpriteRenderer[] spr = GetComponentsInChildren<SpriteRenderer>();
         foreach (SpriteRenderer s in spr)
         {

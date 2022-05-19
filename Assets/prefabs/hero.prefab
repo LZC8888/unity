@@ -361,7 +361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5355558881846884555}
   m_LocalRotation: {x: -0, y: -0, z: 0.0024050626, w: -0.9999971}
-  m_LocalPosition: {x: -0.2699995, y: -1.7899997, z: 1.0860246}
+  m_LocalPosition: {x: -0.2699995, y: -1.7899997, z: 1.086025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5355558882972148889}
@@ -525,7 +525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5355558882011120223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.33, y: 1.06, z: 2.73}
+  m_LocalPosition: {x: 0.1, y: 1.03, z: 2.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5355558882972148889}
@@ -606,13 +606,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5355558882137229290}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21, y: 0.08, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.009110911, w: 0.9999585}
+  m_LocalPosition: {x: 0.21000066, y: 0.08000016, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5355558882972148889}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.044}
 --- !u!212 &5355558882137229288
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -842,6 +842,7 @@ GameObject:
   - component: {fileID: 5355558882972148895}
   - component: {fileID: 5355558882972148893}
   - component: {fileID: 5355558882478019863}
+  - component: {fileID: 748851434}
   m_Layer: 0
   m_Name: hero
   m_TagString: Player
@@ -975,6 +976,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &748851434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5355558882972148888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c0c4b0d731ffa047ba335b5fe3c8f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  repeatDamagePeriod: 2
+  hurtForce: 10
+  damageAmount: 60
 --- !u!1 &5355558883032180099
 GameObject:
   m_ObjectHideFlags: 0

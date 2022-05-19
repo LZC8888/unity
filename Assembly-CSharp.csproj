@@ -58,14 +58,17 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\scripts\Rocket.cs" />
+    <Compile Include="Assets\scripts\Enemy.cs" />
+    <Compile Include="Assets\scripts\Remover.cs" />
     <Compile Include="Assets\scripts\Background.cs" />
     <Compile Include="Assets\scripts\Gun.cs" />
     <Compile Include="Assets\scripts\HelloWorld.cs" />
     <Compile Include="Assets\scripts\PlayerHealth.cs" />
     <Compile Include="Assets\scripts\CameraFollow.cs" />
+    <Compile Include="Assets\scripts\Spawner.cs" />
     <Compile Include="Assets\scripts\Destroyer.cs" />
     <Compile Include="Assets\scripts\HeroFollow.cs" />
-    <Compile Include="Assets\scripts\Enemy.cs" />
+    <Compile Include="Assets\scripts\Coroutine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
