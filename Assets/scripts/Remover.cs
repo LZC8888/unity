@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Remover : MonoBehaviour
 {
-	//public GameObject splash;
+	public GameObject splash;
 
 
 	void OnTriggerEnter2D(Collider2D col)
@@ -22,7 +22,7 @@ public class Remover : MonoBehaviour
 			}
 
 
-			//Instantiate(splash, col.transform.position, transform.rotation);
+			Instantiate(splash, col.transform.position, transform.rotation);
 
 			Destroy(col.gameObject);
 
@@ -32,7 +32,7 @@ public class Remover : MonoBehaviour
 		else
 		{
 
-			//Instantiate(splash, col.transform.position, transform.rotation);
+			Instantiate(splash, col.transform.position, transform.rotation);
 
 
 			Destroy(col.gameObject);

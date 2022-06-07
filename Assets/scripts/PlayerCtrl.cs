@@ -13,13 +13,19 @@ public class PlayerCtrl : MonoBehaviour
     [HideInInspector]
     public bool bJump = false;
     public float JumpForce = 500;
+    public AudioClip[] JumpClips;
+    public AudioSource audiosource;
     private Transform mGroundCheck;
+    float mVolume = 0;
+    private GameObject bomb;
     Animator anim;
     void Start()
     {
         HeroBody = GetComponent<Rigidbody2D>();
         mGroundCheck = transform.Find("GroundCheck");
         anim = GetComponent<Animator>();
+        audiosource = GetComponent<AudioSource>();
+   //     bomb = Resources.Load<GameObject>("bomb");
     }
 
     // Update is called once per frame
@@ -59,8 +65,17 @@ public class PlayerCtrl : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            mVolume++;
+          //  audioMixer.SetFloat("MasterVolume", mVolume);
+        }
         if (bJump)
         {
+            int i = Random.Range(0, JumpClips.Length);
+            AudioSource.PlayClipAtPoint(JumpClips[i], transform.position);
+            audiosource.clip = JumpClips[i];
+            audiosource.Play();
             HeroBody.AddForce(Vector2.up * JumpForce);
             bJump = false;
             anim.SetTrigger("jump");

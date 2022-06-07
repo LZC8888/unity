@@ -30,5 +30,11 @@ public class Rocket : MonoBehaviour
         {
             collision.gameObject.GetComponent<Enemy>().Hurt();
         }
+        if(collision.gameObject.tag=="BombPickup")
+        {
+            collision.gameObject.GetComponent<Bomb>().Explode();
+            Destroy(collision.transform.root.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
